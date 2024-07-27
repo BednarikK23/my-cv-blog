@@ -40,18 +40,6 @@
     color: $text-light;
   }
 
-  .tags-container {
-    margin-bottom: 1rem;
-    margin-left: -0.1rem;
-    font-size: $font-xs;
-    color: white;
-    font-weight: 500;
-    .tag {
-      border-radius: 5px;
-      padding: 0.2rem 0.4rem;
-      margin-right: 0.3rem;
-    }
-  }
 }
 
 @media screen and (max-width: 900px) {

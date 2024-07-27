@@ -5,6 +5,9 @@
   display: flex;
   justify-content: space-between;
   color: $text-color;
+  z-index: 100;
+  position: fixed;
+  top: 0;
 
   .menu-title {
     font-size: $font-m;
@@ -66,11 +69,11 @@
     .menu-content-container {
       width: 300px;
       height: calc(100% - 65px);
-      position: absolute;
+      position: fixed;
       background: white;
       top: 65px;
-      left: -350px;
-      transition: left ease 0.3s;
+      right: -380px;
+      transition: right ease 0.3s;
       flex-direction: column-reverse;
       padding: 1rem 0 0 2rem;
 
@@ -103,7 +106,7 @@
       }
 
       &.active {
-        left: 0;
+        right: 0;
       }
     }
     .ion-ios-menu,

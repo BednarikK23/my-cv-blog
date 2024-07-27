@@ -26,12 +26,6 @@
     "prettier": "prettier --config .prettierrc './src/**/*.js' --check",
     "prettier:fix": "prettier --config .prettierrc 'src/**/*.js' --write"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
