@@ -1,0 +1,114 @@
+.site-navigation {
+  height: 4rem;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  color: $text-color;
+
+  .menu-title {
+    font-size: $font-m;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-left: 1.3rem;
+  }
+  .menu-content-container {
+    display: flex;
+    align-items: center;
+    margin-right: 1.8rem;
+    .ant-avatar {
+      background: $background;
+      border: 0.1rem solid #ccc;
+      margin-right: 0.5rem;
+    }
+    .menu-avatar-name {
+      font-size: $font-s;
+      font-weight: 500;
+      color: $text-color;
+    }
+  }
+  .ion-ios-menu,
+  .ion-ios-close {
+    font-size: $font-l;
+    width: 4rem;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+  }
+
+  ul {
+    height: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    display: flex;
+    list-style-type: none;
+    padding: 0 1.2rem 0 2.5rem;
+    align-items: center;
+    a {
+      color: $text-color;
+      text-decoration: none;
+      font-size: $font-s;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      padding: 0 1.3rem;
+      &:hover {
+        color: $text-link;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .site-navigation {
+    .menu-content-container {
+      width: 300px;
+      height: calc(100% - 65px);
+      position: absolute;
+      background: white;
+      top: 65px;
+      left: -350px;
+      transition: left ease 0.3s;
+      flex-direction: column-reverse;
+      padding: 1rem 0 0 2rem;
+
+      a {
+        width: 100%;
+        padding: 0;
+      }
+
+      li {
+        height: 4rem;
+        display: flex;
+        align-items: center;
+      }
+
+      ul {
+        flex-direction: column;
+        padding: 0;
+        justify-content: flex-start;
+      }
+
+      ul,
+      li,
+      .menu-avatar-container {
+        width: 100%;
+        margin: 0;
+      }
+
+      .menu-avatar-container {
+        padding-top: 0.5rem;
+      }
+
+      &.active {
+        left: 0;
+      }
+    }
+    .ion-ios-menu,
+    .ion-ios-close {
+      display: flex;
+    }
+  }
+}
