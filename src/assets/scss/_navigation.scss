@@ -19,7 +19,7 @@
   .menu-content-container {
     display: flex;
     align-items: center;
-    margin-right: 1.8rem;
+    margin-left: 1.8rem;
     .ant-avatar {
       background: $background;
       border: 0.1rem solid #ccc;
@@ -68,10 +68,10 @@
   .site-navigation {
     .menu-content-container {
       width: 300px;
-      height: calc(100% - 65px);
+      height: calc(100% - 4rem);
       position: fixed;
       background: white;
-      top: 65px;
+      top: 3.9rem;
       right: -380px;
       transition: right ease 0.3s;
       flex-direction: column-reverse;
