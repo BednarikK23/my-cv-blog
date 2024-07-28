@@ -1,0 +1,19 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "A KOa and GrapQl backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Krystof Bednarik",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/schema": "^10.0.4",
+    "@graphql-tools/utils": "^10.3.2",
+    "apollo-server-koa": "^3.13.0",
+    "graphql-tools": "^9.0.1",
+    "koa": "^2.15.3",
+    "moment": "^2.30.1"
+  }
+}
