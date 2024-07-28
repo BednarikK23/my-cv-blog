@@ -4,7 +4,9 @@
   "description": "A KOa and GrapQl backend",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "create-migration": "node ./database/actions/create-migration.js",
+    "run-migration": "node ./database/actions/run-migration.js"
   },
   "author": "Krystof Bednarik",
   "license": "ISC",
@@ -12,6 +14,7 @@
     "@graphql-tools/schema": "^10.0.4",
     "@graphql-tools/utils": "^10.3.2",
     "apollo-server-koa": "^3.13.0",
+    "bluebird": "^3.7.2",
     "dotenv": "^16.4.5",
     "graphql-tools": "^9.0.1",
     "knex": "^3.1.0",
