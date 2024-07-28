@@ -1,6 +1,6 @@
 const knex = require('../mysql');
 const promise = require('bluebird');
-const path = require('knex');
+const path = require('path');
 const fs = require('fs');
 
 const db = knex.client.config.connection.database || null
@@ -26,15 +26,16 @@ fs.readdir(
                             return reject(err);
                         }
                         return knex.raw(replaceAll(data, '{}', db))
-                            .then(resolve);
+                            .then(resolve)
+                            .catch(reject);
                     }
                 );
             });
         }).then(() => {
             console.log('Migrations have run successfully');
         })
-        .catch(err =>  {
-            throw new Error(err);
-        })
+            .catch(err => {
+                throw new Error(err);
+            });
     }
-)
+);
